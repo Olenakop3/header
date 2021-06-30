@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="main.css">
+    <style>
+      * {box-sizing: border-box;}
+
+    body {
+      margin: 0;
+      background: bisque;
+    }
+
+    header {
+      height: 54px;
+      background-color: aqua;
+      margin-bottom: 2px;
+      padding: 0 5%;
+    }
+
+    .header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 0 auto 2px;
+      max-width: 1600px;
+      background-color: yellowgreen;
+      height: 100%;
+    }
+
+    .logo {
+      background: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 106px;
+      height: 23px;
+    }
+
+    .header-logo {
+      width: 137px;
+      padding: 15.5px;
+    }
+
+    .nav-left {
+      display: flex;
+    }
+
+    .nav-right {
+      display: flex;
+    }
+
+    a {
+      text-decoration: none;
+      color: #262626;
+      font-family: 'Segoe UI',SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;    
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .surface {
+      position: relative;
+      height: 54px;
+      padding: 15px;
+    }
+
+    .surface::before {
+      content: " ";
+      position: absolute;
+      border-left: 2px solid #000; 
+      height: 24px;
+      left: 5px;
+    }
+
+    .surface::after {
+      content: " ";
+      position: absolute;
+      visibility: hidden;
+      border-bottom: 2px solid #000; 
+      width: 61px;
+      bottom: 13px;
+      left: 15px;
+    }
+
+    .surface:hover::after {
+      visibility: visible;
+    }
+
+    .surface a {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .btn {
+      padding: 20px 30px 20px 12px;
+      position: relative;
+      color: black;
+    }
+
+    .comp:before {
+      content: " ";
+      position: absolute;
+      visibility: hidden;
+      border-bottom: 2px solid #000; 
+      width: 62px;
+      top: 39px;
+      left: 13px;
+    }
+
+    .comp:hover::before {
+      visibility: visible;
+    }
+
+    .busin:before {
+      content: " ";
+      position: absolute;
+      visibility: hidden;  
+      border-bottom: 2px solid #000; 
+      width: 134px;
+      top: 39px;
+      left: 13px;
+    }
+
+    .busin:hover::before {
+      visibility: visible;
+    }
+
+    .access:before {
+      content: " ";
+      position: absolute;
+      visibility: hidden;
+      border-bottom: 2px solid #000; 
+      width: 67px;
+      top: 39px;
+      left: 11px;
+    }
+
+    .access:hover::before {
+      visibility: visible;
+    }
+
+    .more:before {
+      content: " ";
+      position: absolute;
+      visibility: hidden;
+      border-bottom: 2px solid #000; 
+      width: 31px;
+      top: 39px;
+      left: 12px;
+    }
+
+    .more:hover::before {
+      visibility: visible;
+    }
+
+    .all:before {
+      content: " ";
+      position: absolute;
+      visibility: hidden;
+      border-bottom: 2px solid #000;
+      width: 75px;
+      top: 39px;
+      left: 11px;
+    }
+
+    .all:hover::before {
+      visibility: visible;
+    }
+
+    .btn::after {
+      position: absolute;
+      content: "\f107";
+      font-family: FontAwesome;
+      color:  #262626;
+      right: 12px;
+      top: 22px;
+    }
+
+    .cart {
+      position: relative;
+      padding: 20px 30px 20px 12px;
+    }
+
+    .cart::after {
+      position: absolute;
+      content: "\f07a";
+      font-family: FontAwesome;
+      color: #262626;
+      font-size: 16px;
+    }
+
+    .search {
+      position: relative;
+      padding: 20px 30px 20px 12px;
+    }
+
+    .search::after {
+      position: absolute;
+      content: "\f002";
+      font-family: FontAwesome;
+      color: #262626;
+      font-size: 16px;
+    }
+
+    .user {
+      position: relative;
+      padding: 20px 30px 20px 12px;
+      color: #000;
+    }
+
+    .user::after {
+      position: absolute;
+      content: "\f234";
+      font-family: FontAwesome;
+      color:  #262626;
+      font-size: 16px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="nav-left">
+                <div class="header-logo">
+                    <a href="https://www.microsoft.com/">
+                        <div class="logo"></div>
+                    </a>
+              </div>
+          <div class="surface">
+            <a href="https://www.microsoft.com/en-us/surface"><span>Surface</span></a>
+          </div>
+              <div class="btn comp"><a href="#">Computers</a></div>    
+              <div class="btn busin"><a href="#">Computers for Business</a></div>
+              <div class="btn access"><a href="#">Accessories</a></div>
+              <div class="btn more"><a href="#">More</a></div>
+            </div>
+            <div class="nav-right">
+                <div class="btn all"><a href="#">All Microsoft</a></div>
+                <div class="search"><a href="#"></a></div>
+                <div class="cart"><a href="#"></a></div>
+                <div class="user"><a href="#"></a></div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>
